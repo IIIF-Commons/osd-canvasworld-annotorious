@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OSD CanvasWorld Annotorious demo</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/manifesto.js@4.3.0-pre-4/dist-umd/manifesto.js"></script>
+    <script src="//openseadragon.github.io/openseadragon/openseadragon.js"></script>
+  </head>
+
+  <body>
+    test
+    <!-- <div id="app"></div> -->
+    <div id="seadragon-viewer" style="width: 800px; height: 600px;"></div>
+    <script>
+      (function () {
+        console.log("test", manifesto);
+
+        Manifesto.loadManifest(
+          "http://wellcomelibrary.org/iiif/b18035723/manifest"
+        ).then((json) => {
+          console.log(json);
+        });
+      })();
+
+      // Utils.loadManifest(that._options.manifestUri).then(json => {
+      //     that._loaded(that, json, resolve, reject);
+      //   });
+
+      // var tileSet = [
+      // 	"https://osd-test--edsilv.repl.co/tiles/info.json"
+      // ];
+
+      // var viewer = OpenSeadragon({
+      // 	id: "seadragon-viewer",
+      // 	prefixUrl: "//openseadragon.github.io/openseadragon/images/",
+      // 	tileSources: tileSet
+      // });
+    </script>
+    <!-- <script src="src/index.js">
+	</script> -->
+  </body>
+</html>
