@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>OSD CanvasWorld Annotorious demo</title>
@@ -12,15 +11,17 @@
     <!-- <div id="app"></div> -->
     <div id="seadragon-viewer" style="width: 800px; height: 600px;"></div>
     <script>
-      (function () {
-        console.log("test", manifesto);
-
-        Manifesto.loadManifest(
-          "http://wellcomelibrary.org/iiif/b18035723/manifest"
-        ).then((json) => {
-          console.log(json);
-        });
-      })();
+      // https://collections.st-andrews.ac.uk/762604/manifest
+      // (function () {
+      //   manifesto.loadManifest(
+      //     "http://wellcomelibrary.org/iiif/b18035723/manifest"
+      //   ).then((json) => {
+      //     var manifest = manifesto.parseManifest(json);
+      //     var sequence = manifest.getSequenceByIndex(0);
+      //     var canvases = sequence.getCanvases();
+          
+      //   });
+      // })();
 
       // Utils.loadManifest(that._options.manifestUri).then(json => {
       //     that._loaded(that, json, resolve, reject);
@@ -36,7 +37,6 @@
       // 	tileSources: tileSet
       // });
     </script>
-    <!-- <script src="src/index.js">
-	</script> -->
+    <script src="src/index.js"></script>
   </body>
 </html>
