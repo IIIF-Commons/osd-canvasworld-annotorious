@@ -1,0 +1,1 @@
+Work in progress demo of multi-up in Annotorious using manifesto's CanvasWorld.
