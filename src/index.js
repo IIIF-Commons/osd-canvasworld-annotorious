@@ -10,30 +10,32 @@ import "./styles.css";
   const manifest = manifesto.parseManifest(json);
   const sequence = manifest.getSequenceByIndex(0);
   const canvases = sequence.getCanvases();
-  
-  let images = await getExternalResources(resources);
-  
+
   const layers = [];
   
   const viewingDirection = "left-to-right";
+
+  const canvasWorld = new manifesto.CanvasWorld(canvases, layers, viewingDirection);
+
+  console.log(canvasWorld);
+
+  // let images = await getExternalResources(resources);
+
+  // for (let i = 0; i < images.length; i++) {
+  //   const data = images[i];
   
-  for (let i = 0; i < images.length; i++) {
-    const data = images[i];
+  //   let tileSource;
   
-    let tileSource;
-  
-    if (data.hasServiceDescriptor) {
-      tileSource = data;
-    } else {
-      tileSource = {
-        type: "image",
-        url: data.id,
-        buildPyramid: false
-      };
-    }
-  }
-  
-  var canvasWorld = new manifesto.CanvasWorld(canvases, layers, viewingDirection);
+  //   if (data.hasServiceDescriptor) {
+  //     tileSource = data;
+  //   } else {
+  //     tileSource = {
+  //       type: "image",
+  //       url: data.id,
+  //       buildPyramid: false
+  //     };
+  //   }
+  // }
   
 })();
 
